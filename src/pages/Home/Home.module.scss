@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.root {
+  min-height: 100vh;
+  background-color: $third;
+}
+
+.contentWrap {
+  padding-top: 128px;
+  display: flex;
+}
+
+.contentText {
+  max-width: 515px;
+}
+
+.text {
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.contentParallax {
+  flex-grow: 1;
+}
