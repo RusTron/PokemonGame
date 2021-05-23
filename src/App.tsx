@@ -1,11 +1,18 @@
 import React from 'react';
-import Home from './pages/Home';
+import { useRoutes } from 'hookrouter';
+import routes from './routes';
+import Header from './components/Header';
+import EmptyPage from './pages/EmptyPage';
+// import Home from './pages/Home';
 
 const App = () => {
+  const match = useRoutes(routes);
+
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <Header />
+      {match || <EmptyPage />}
+    </>
   );
 };
 
