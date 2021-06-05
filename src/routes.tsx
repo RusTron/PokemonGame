@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import EmptyPage from './pages/EmptyPage';
 import Pokedex from './pages/Pokedex';
 import Home from './pages/Home';
 import { LinkEnum } from './utils/enums';
+import Pokemon, { PokemonProps } from './pages/Pokemon';
 
 interface GeneralMenuType {
   title: string;
   link: string;
-  component: () => JSX.Element;
+  component: (props: PropsWithChildren<any>) => JSX.Element;
 }
 
 export const GENERAL_MENU: GeneralMenuType[] = [
@@ -33,10 +34,18 @@ export const GENERAL_MENU: GeneralMenuType[] = [
   },
 ];
 
+const SECOND_ROUTES: GeneralMenuType[] = [
+  {
+    title: 'Pokemon',
+    link: LinkEnum.POKEMON,
+    component: ({ id }: PokemonProps) => <Pokemon id={id} />,
+  },
+];
 interface AccTypes {
-  [key: string]: () => JSX.Element;
+  [key: string]: (props: PropsWithChildren<any>) => JSX.Element;
 }
-const routes = GENERAL_MENU.reduce((acc: AccTypes, item: GeneralMenuType) => {
+
+const routes = [...GENERAL_MENU, ...SECOND_ROUTES].reduce((acc: AccTypes, item: GeneralMenuType) => {
   acc[item.link] = item.component;
   return acc;
 }, {});

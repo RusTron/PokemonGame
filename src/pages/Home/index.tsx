@@ -5,7 +5,7 @@ import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import Parallax from './components/Parallax';
 import s from './Home.module.scss';
-import { LinkEnum } from '../../routes';
+import { LinkEnum } from '../../utils/enums';
 
 export default function Home() {
   return (

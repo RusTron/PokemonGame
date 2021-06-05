@@ -7,7 +7,7 @@ import Button from '../../components/Button';
 
 import TeamRocket from './assets/Team_Rocket.png';
 
-import { LinkEnum } from '../../routes';
+import { LinkEnum } from '../../utils/enums';
 
 const EmptyPage = () => (
   <div className={s.root}>
