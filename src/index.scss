@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import './variables';
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: $h1;
+  line-height: 84px;
+  letter-spacing: 4px;
+}
+
+h2,
+.h2 {
+  font-size: $h2;
+  line-height: 75px;
+}
+
+h3,
+.h3 {
+  font-size: $h3;
+  line-height: 42px;
+}
+
+h4,
+.h4 {
+  font-size: $h4;
+  line-height: 28px;
+}
+
+h5,
+.h5 {
+  font-size: $h5;
+  line-height: 21px;
+}
+
+h6,
+.h6 {
+  font-size: $h6;
+  line-height: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: normal;
+}
